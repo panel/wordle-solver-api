@@ -36,8 +36,10 @@ const check = (solution: string, word: string): LetterResult[] => {
   });
 };
 
-const dictionary: string[] = await Deno.readTextFile("./fiveLetterWords.txt")
-  .then((data) => data.split("\n"));
+// const dictionary: string[] = await Deno.readTextFile("./fiveLetterWords.txt")
+//   .then((data) => data.split("\n"));
+
+const dictionary: string[] = ['count'];
 
 const makeGame = (engine?: string): Game => {
   const word = dictionary[Math.floor(Math.random() * dictionary.length)];
